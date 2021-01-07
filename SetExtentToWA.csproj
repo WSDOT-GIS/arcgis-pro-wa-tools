@@ -127,6 +127,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SetExtentToWA.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md" />
+    <None Include="UNLICENSE" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!--
   PackageAction can be:
