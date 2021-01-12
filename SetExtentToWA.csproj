@@ -54,64 +54,8 @@
     <Reference Include="PresentationFramework" />
     <Reference Include="WindowsBase" />
     <Reference Include="System.Xaml" />
-    <Reference Include="ArcGIS.Desktop.Framework">
-      <HintPath>C:\Program Files\ArcGIS\Pro\bin\ArcGIS.Desktop.Framework.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="ArcGIS.Core">
-      <HintPath>C:\Program Files\ArcGIS\Pro\bin\ArcGIS.Core.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="ArcGIS.Desktop.Core">
-      <HintPath>C:\Program Files\ArcGIS\Pro\bin\Extensions\Core\ArcGIS.Desktop.Core.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="ArcGIS.Desktop.Mapping">
-      <HintPath>C:\Program Files\ArcGIS\Pro\bin\Extensions\Mapping\ArcGIS.Desktop.Mapping.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="ArcGIS.Desktop.Catalog">
-      <HintPath>C:\Program Files\ArcGIS\Pro\bin\Extensions\Catalog\ArcGIS.Desktop.Catalog.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="ArcGIS.Desktop.Editing">
-      <HintPath>C:\Program Files\ArcGIS\Pro\bin\Extensions\Editing\ArcGIS.Desktop.Editing.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="ArcGIS.Desktop.Extensions">
-      <HintPath>C:\Program Files\ArcGIS\Pro\bin\Extensions\DesktopExtensions\ArcGIS.Desktop.Extensions.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="ArcGIS.Desktop.GeoProcessing">
-      <HintPath>C:\Program Files\ArcGIS\Pro\bin\Extensions\GeoProcessing\ArcGIS.Desktop.GeoProcessing.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="ArcGIS.Desktop.Layouts">
-      <HintPath>C:\Program Files\ArcGIS\Pro\bin\Extensions\Layout\ArcGIS.Desktop.Layouts.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="ArcGIS.Desktop.Shared.Wpf">
-      <HintPath>C:\Program Files\ArcGIS\Pro\bin\ArcGIS.Desktop.Shared.Wpf.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="ArcGIS.Desktop.Ribbon.Wpf">
-      <HintPath>C:\Program Files\ArcGIS\Pro\bin\ArcGIS.Desktop.Ribbon.Wpf.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="ArcGIS.Desktop.DataGrid.Contrib.Wpf">
-      <HintPath>C:\Program Files\ArcGIS\Pro\bin\ArcGIS.Desktop.DataGrid.Contrib.Wpf.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="ArcGIS.Desktop.Resources">
       <HintPath>C:\Program Files\ArcGIS\Pro\bin\ArcGIS.Desktop.Resources.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="ArcGIS.Desktop.Resources">
-      <HintPath>C:\Program Files\ArcGIS\Pro\bin\ArcGIS.Desktop.Resources.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="ESRI.ArcGIS.ItemIndex">
-      <HintPath>C:\Program Files\ArcGIS\Pro\bin\ESRI.ArcGIS.ItemIndex.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
@@ -130,6 +74,11 @@
   <ItemGroup>
     <None Include="README.md" />
     <None Include="UNLICENSE" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Esri.ArcGISPro.Extensions">
+      <Version>2.6.0.24783</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!--

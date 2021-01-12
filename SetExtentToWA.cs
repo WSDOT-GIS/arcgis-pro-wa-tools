@@ -50,7 +50,6 @@ namespace SetExtentToWA
 
             if (result == System.Windows.MessageBoxResult.OK)
             {
-
                 QueuedTask.Run(() =>
                 {
                     foreach (var item in items)
