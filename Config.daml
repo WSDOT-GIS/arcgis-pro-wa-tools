@@ -28,7 +28,7 @@
       </groups>
       <controls>
         <!-- add your controls here -->
-        <button id="SetExtentToWA_SetExtentToWA" caption="SetExtentToWA" className="SetExtentToWA" loadOnClick="true" smallImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericButtonBlue16.png" largeImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericButtonBlue32.png">
+        <button id="SetExtentToWA_SetExtentToWA" caption="SetExtentToWA" className="SetExtentToWA" loadOnClick="true" smallImage="Images/Flag_map_of_Washington_16.png" largeImage="Images/Flag_map_of_Washington.png">
           <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
         </button>
       </controls>
