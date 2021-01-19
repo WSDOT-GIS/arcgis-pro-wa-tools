@@ -11,7 +11,7 @@
                     Content, Framework, Editing, Geodatabase, Geometry, Geoprocessing, Layouts, Map Authoring, Map Exploration -->
   </AddInInfo>
   <modules>
-    <insertModule id="SetExtentToWA_Module" className="Module1" autoLoad="false" caption="Module1">
+    <insertModule id="SetExtentToWA_Module" className="Module1" autoLoad="false" caption="WA Tools">
       <!-- uncomment to have the control hosted on a separate tab-->
       <tabs>
         <!--<tab id="SetExtentToWA_Tab1" caption="New Tab">
@@ -21,7 +21,7 @@
       <groups>
         <!-- comment this out if you have no controls on the Addin tab to avoid
               an empty group-->
-        <group id="SetExtentToWA_Group1" caption="Group 1" appearsOnAddInTab="true">
+        <group id="SetExtentToWA_Group1" caption="WA Tools" appearsOnAddInTab="true">
           <!-- host controls within groups -->
           <button refID="SetExtentToWA_SetExtentToWA" size="large" />
         </group>
