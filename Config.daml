@@ -1,11 +1,11 @@
 ﻿<ArcGIS defaultAssembly="SetExtentToWA.dll" defaultNamespace="SetExtentToWA" xmlns="http://schemas.esri.com/DADF/Registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.esri.com/DADF/Registry file:///C:/Program%20Files/ArcGIS/Pro/bin/ArcGIS.Desktop.Framework.xsd">
-  <AddInInfo id="{f359bb66-3dde-4659-abaf-cdddebbd1de2}" version="1.0" desktopVersion="2.7.26828">
-    <Name>SetExtentToWA</Name>
+  <AddInInfo id="{f359bb66-3dde-4659-abaf-cdddebbd1de2}" version="1.1" desktopVersion="2.7.26828">
+    <Name>Set Extent to WA</Name>
     <Description>SetExtentToWA description</Description>
-    <Image>Images\AddinDesktop32.png</Image>
+    <Image>Images\Flag_map_of_Washington.png</Image>
     <Author>Jeff Jacobson</Author>
     <Company>WSDOT</Company>
-    <Date>1/6/2021 3:54:07 PM</Date>
+    <Date>1/19/2021 4:54:07 PM</Date>
     <Subject>Map Authoring</Subject>
     <!-- Note subject can be one or more of these topics:
                     Content, Framework, Editing, Geodatabase, Geometry, Geoprocessing, Layouts, Map Authoring, Map Exploration -->
@@ -28,7 +28,7 @@
       </groups>
       <controls>
         <!-- add your controls here -->
-        <button id="SetExtentToWA_SetExtentToWA" caption="SetExtentToWA" className="SetExtentToWA" loadOnClick="true" smallImage="Images/Flag_map_of_Washington_16.png" largeImage="Images/Flag_map_of_Washington.png">
+        <button id="SetExtentToWA_SetExtentToWA" caption="Set map extents to WA" className="SetExtentToWA" loadOnClick="true" smallImage="Images/Flag_map_of_Washington_16.png" largeImage="Images/Flag_map_of_Washington.png">
           <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
         </button>
       </controls>
