@@ -36,8 +36,10 @@ namespace SetExtentToWA
             ymax = 1383832.028539666;
 
             var sr = SpatialReferenceBuilder.CreateSpatialReference(2927);
-            var envelope = EnvelopeBuilder.CreateEnvelope(xmin, ymin, xmax, ymax, sr);
-
+            var waEnvelope = EnvelopeBuilder.CreateEnvelope(xmin, ymin, xmax, ymax, sr);
+            // Create polygon for clipping
+            var waPolygon = PolygonBuilder.CreatePolygon(waEnvelope);
+            var lineSymbolForCrop = new CIMLineSymbol();
 
 
             var items = project.GetItems<MapProjectItem>();
@@ -52,10 +54,35 @@ namespace SetExtentToWA
             {
                 QueuedTask.Run(() =>
                 {
+                    var geometryEngine = GeometryEngine.Instance;
                     foreach (var item in items)
                     {
                         var map = item.GetMap();
-                        map.SetCustomFullExtent(envelope);
+                        // Get the current full extent of the map.
+                        var currentFullExtent = map.CalculateFullExtent();
+                        // Set the map's full extent to WA if WA is contained in the current full extent.
+                        NotificationItem nItem;
+                        bool extentWasChanged = false;
+                        if (geometryEngine.Contains(currentFullExtent, waEnvelope))
+                        {
+                            map.SetCustomFullExtent(waEnvelope);
+                            extentWasChanged = true;
+                            nItem = new NotificationItem($"{DateTime.Now.Ticks}", false, $"Extent of map \"{map.Name}\" set to WA.", NotificationType.Information);
+                        }
+                        else
+                        {
+                            nItem = new NotificationItem($"{DateTime.Now.Ticks}", false, $"Extent of map \"{map.Name}\" was not changed. Current full extent does not contain WA.", NotificationType.Information);
+                        }
+                        NotificationManager.AddNotification(nItem);
+
+                        if (extentWasChanged)
+                        {
+                            var currentClipGeometry = map.GetClipGeometry();
+                            if (currentClipGeometry == null)
+                            {
+                                map.SetClipGeometry(waPolygon, lineSymbolForCrop);
+                            }
+                        }
                     }
                 });
             }
