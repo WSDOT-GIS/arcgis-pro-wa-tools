@@ -20,18 +20,18 @@ using System.Windows.Input;
 
 namespace SetExtentToWA
 {
-    internal class Module1 : Module
+    internal class WATools : Module
     {
-        private static Module1 _this = null;
+        private static WATools _this = null;
 
         /// <summary>
         /// Retrieve the singleton instance to this module here
         /// </summary>
-        public static Module1 Current
+        public static WATools Current
         {
             get
             {
-                return _this ?? (_this = (Module1)FrameworkApplication.FindModule("SetExtentToWA_Module"));
+                return _this ?? (_this = (WATools)FrameworkApplication.FindModule("WATools_Module"));
             }
         }
 

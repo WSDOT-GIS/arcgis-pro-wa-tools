@@ -11,7 +11,7 @@
                     Content, Framework, Editing, Geodatabase, Geometry, Geoprocessing, Layouts, Map Authoring, Map Exploration -->
   </AddInInfo>
   <modules>
-    <insertModule id="SetExtentToWA_Module" className="Module1" autoLoad="false" caption="WA Tools">
+    <insertModule id="WATools_Module" className="WATools" autoLoad="false" caption="WA Tools">
       <!-- uncomment to have the control hosted on a separate tab-->
       <tabs>
         <!--<tab id="SetExtentToWA_Tab1" caption="New Tab">
