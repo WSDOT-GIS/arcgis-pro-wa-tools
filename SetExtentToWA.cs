@@ -63,9 +63,11 @@ namespace SetExtentToWA
                         // Set the map's full extent to WA if WA is contained in the current full extent.
                         NotificationItem nItem;
                         bool extentWasChanged = false;
-                        if (geometryEngine.Contains(currentFullExtent, waEnvelope))
+                        // If the map's projection is not the same as WA envelope, project the envelope to match map.
+                        var projectedWaEnvelope = !waEnvelope.SpatialReference.IsEqual(map.SpatialReference) ? (Envelope)geometryEngine.Project(waEnvelope, map.SpatialReference) : waEnvelope;
+                        if (geometryEngine.Contains(currentFullExtent, projectedWaEnvelope))
                         {
-                            map.SetCustomFullExtent(waEnvelope);
+                            map.SetCustomFullExtent(projectedWaEnvelope);
                             extentWasChanged = true;
                             nItem = new NotificationItem($"{DateTime.Now.Ticks}", false, $"Extent of map \"{map.Name}\" set to WA.", NotificationType.Information);
                         }
