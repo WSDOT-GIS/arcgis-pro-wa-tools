@@ -14,21 +14,21 @@
     <insertModule id="WATools_Module" className="WATools" autoLoad="false" caption="WA Tools">
       <!-- uncomment to have the control hosted on a separate tab-->
       <tabs>
-        <!--<tab id="SetExtentToWA_Tab1" caption="New Tab">
-          <group refID="SetExtentToWA_Group1"/>
-        </tab>-->
+        <tab id="SetExtentToWA_Tab" caption="WA Tools" keytip="W">
+          <group refID="WAMapTools_Group"/>
+        </tab>
       </tabs>
       <groups>
         <!-- comment this out if you have no controls on the Addin tab to avoid
               an empty group-->
-        <group id="SetExtentToWA_Group1" caption="WA Tools" appearsOnAddInTab="true" keytip="W">
+        <group id="WAMapTools_Group" caption="WA Map Tools" appearsOnAddInTab="false" keytip="W">
           <!-- host controls within groups -->
-          <button refID="SetExtentToWA_SetExtentToWA" size="large" />
+          <button refID="SetExtentToWA_Button" size="large" />
         </group>
       </groups>
       <controls>
         <!-- add your controls here -->
-        <button id="SetExtentToWA_SetExtentToWA" caption="Set map extents to WA" className="SetExtentToWA" loadOnClick="true" smallImage="Images/Flag_map_of_Washington_16.png" largeImage="Images/Flag_map_of_Washington.png" keytip="X">
+        <button id="SetExtentToWA_Button" caption="Set map extents to WA" className="SetExtentToWA" loadOnClick="true" smallImage="Images/Flag_map_of_Washington_16.png" largeImage="Images/Flag_map_of_Washington.png" keytip="X">
           <tooltip heading="Set Extent to WA">Set extents of map to WA's extent<disabledText /></tooltip>
         </button>
       </controls>
