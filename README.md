@@ -1,5 +1,9 @@
 ﻿# ArcGIS Pro tools for Washington State
 
+## Where to download
+
+The compiled add-in can be found here: [Latest release](https://github.com/WSDOT-GIS/arcgis-pro-wa-tools/releases/latest). The add-in file ends with `.esriAddinX`.
+
 ## Tools
 
 ### Set map extents to WA
