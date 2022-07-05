@@ -19,6 +19,7 @@ using System.Threading.Tasks;
 using MessageBoxResult = System.Windows.MessageBoxResult;
 using MessageBoxButton = System.Windows.MessageBoxButton;
 using MessageBoxImage = System.Windows.MessageBoxImage;
+using ArcGIS.Core.Internal.Geometry;
 
 namespace SetExtentToWA
 {

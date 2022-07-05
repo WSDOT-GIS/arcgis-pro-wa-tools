@@ -1,5 +1,6 @@
-﻿<ArcGIS defaultAssembly="SetExtentToWA.dll" defaultNamespace="SetExtentToWA" xmlns="http://schemas.esri.com/DADF/Registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.esri.com/DADF/Registry file:///C:/Program%20Files/ArcGIS/Pro/bin/ArcGIS.Desktop.Framework.xsd">
-  <AddInInfo id="{f359bb66-3dde-4659-abaf-cdddebbd1de2}" version="1.1.1" desktopVersion="2.9.32739">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArcGIS defaultAssembly="SetExtentToWA.dll" defaultNamespace="SetExtentToWA" xmlns="http://schemas.esri.com/DADF/Registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.esri.com/DADF/Registry file:///C:/Program%20Files/ArcGIS/Pro/bin/ArcGIS.Desktop.Framework.xsd">
+  <AddInInfo id="{f359bb66-3dde-4659-abaf-cdddebbd1de2}" version="1.1.1" desktopVersion="3.0.36056">
     <Name>Set Extent to WA</Name>
     <Description>SetExtentToWA description</Description>
     <Image>Images\Flag_map_of_Washington.png</Image>
@@ -15,7 +16,7 @@
       <!-- uncomment to have the control hosted on a separate tab-->
       <tabs>
         <tab id="SetExtentToWA_Tab" caption="WA Tools" keytip="W">
-          <group refID="WAMapTools_Group"/>
+          <group refID="WAMapTools_Group" />
         </tab>
       </tabs>
       <groups>
